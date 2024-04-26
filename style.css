@@ -2,7 +2,6 @@
 
 body {
     font-family: "Raleway";
-    background-color: #daf9ff;
     overflow: hidden;
     margin: 0;
 }
@@ -12,6 +11,14 @@ body {
     justify-items: center;
     align-items: center;
     height: 100vh;
+}
+
+.opacity {
+    width: 100vw;
+    height: 100vh;
+    background-color: #daf9ff96;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 
 .title {
@@ -28,10 +35,28 @@ body {
     font-weight: 700;
     font-size: 20pt;
     text-decoration: none;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 
 .title:hover {
     background-color: #937aff;
     color: #ffffff;
     transition: 0.2s;
+}
+
+video {
+    width: 100vw;
+    height:100vh;
+    z-index: -1;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+audio {
+    width: 500px;
+    height: 100px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: flex-start;
 }
