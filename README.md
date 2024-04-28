@@ -1,3 +1,3 @@
-# COMPP
+# Mindfulness
 
-https://remohoesli.github.io/COMPP/
+https://remohoesli.github.io/Mindfulness/
