@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindfulness</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="parent">
-        <div class="opacity"></div>
-        <div class="title" id="start">Start</div>
+        <div class="opacity" id="opa"></div>
+        <a class="button" id="button" href="#">Start</a>
 
-        <video autoplay loop muted>
+        <video id="video" loop muted>
             <source src="Idea.mp4" type="video/mp4">
         </video>
-        <audio id="sound" controls loop>
+        <audio id="sound" loop volume="0.5">
             <source src="audio.mp3" type="audio/mpeg">
           </audio>
     </div>
