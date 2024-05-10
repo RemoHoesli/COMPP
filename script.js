@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const root = document.documentElement;
+ /*   const root = document.documentElement;
     const gradient_1 = 0.7; const gradient_2 = 0.7; const gradient_3 = 0.7; const gradient_4 = 0.7; 
 
     var timer = setInterval(changeGradient1,1000);
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         root.style.setProperty('--gradient3', gradient_3+change_3);
         root.style.setProperty('--gradient4', gradient_4+change_4);
     }
-
+*/
     
 
 
