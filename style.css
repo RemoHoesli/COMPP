@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --gradient1: 0.7;
+    --gradient2: 0.7;
+    --gradient3: 0.7;
+    --gradient4: 0.7;
+
+    --gr1: 0.0;
+    --gr2: ;
+    --gr3: ;
+    --gr4: ;
+
+}
+
 body {
     font-family: "Raleway";
     overflow: hidden;
@@ -63,3 +76,43 @@ audio {
     grid-column: 1/2;
     align-self: flex-start;
 }
+
+.animation {
+    width: 100vw;
+    height: 100vh;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.gradient-box {
+    /* Set the size of the element */
+    width: 100vw;
+    height: 100vh;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    animation-name: gradients;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+    /* Use a background image with multiple gradients */
+    background-image: 
+        linear-gradient(to top left, rgba(0,0,0,0), rgba(0, 247, 255, var(--gradient1))),   /* Top-left corner gradient */
+        linear-gradient(to top right, rgba(0, 0, 0, 0), rgb(0, 255, 200, var(--gradient2))),  /* Top-right corner gradient */
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgb(153, 0, 255, var(--gradient3))), /* Bottom-right corner gradient */
+        linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgb(0, 153, 255, var(--gradient4)));  /* Bottom-left corner gradient */
+        
+
+    /* Position the gradients */
+    background-position:
+        top left,    /* Position of top-left gradient */
+        top right,   /* Position of top-right gradient */
+        bottom right, /* Position of bottom-right gradient */
+        bottom left; /* Position of bottom-left gradient */
+
+    /* Set the size of the gradients */
+    background-size: 100% 100%; /* Each gradient covers half the width and height */
+
+    /* Combine all gradients into one background */
+    background-repeat: no-repeat; /* Prevent repeating the gradient */
+}
+
