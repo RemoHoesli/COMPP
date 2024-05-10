@@ -15,7 +15,7 @@
 
 body {
     font-family: "Raleway";
-    /*overflow: hidden;*/
+    overflow: hidden;
     margin: 0;
 }
 
@@ -87,7 +87,6 @@ audio {
 }
 
 .gradient-box {
-    /* Set the size of the element */
     width: 100vw;
     height: 100vh;
     
@@ -100,25 +99,18 @@ audio {
     animation-timing-function: ease-in-out;
 
     
-    /* Use a background image with multiple gradients */
     background-image: 
-        linear-gradient(to top left, rgba(0,0,0,0), rgba(0, 247, 255, var(--gr1))),   /* Top-left corner gradient */
-        linear-gradient(to top right, rgba(0, 0, 0, 0), rgb(0, 255, 200, var(--gr2))),  /* Top-right corner gradient */
-        linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgb(23, 0, 255, var(--gr3))), /* Bottom-right corner gradient */
-        linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgb(0, 153, 255, var(--gr4)));  /* Bottom-left corner gradient */ 
-
-    /* Position the gradients */
+        linear-gradient(to top left, rgba(0,0,0,0), rgba(0, 247, 255, var(--gr1))),
+        linear-gradient(to top right, rgba(0, 0, 0, 0), rgb(0, 255, 200, var(--gr2))),
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgb(23, 0, 255, var(--gr3))),
+        linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgb(0, 153, 255, var(--gr4)));
     background-position:
-        top left,    /* Position of top-left gradient */
-        top right,   /* Position of top-right gradient */
-        bottom right, /* Position of bottom-right gradient */
-        bottom left; /* Position of bottom-left gradient */
-
-    /* Set the size of the gradients */
-    background-size: 100% 100%; /* Each gradient covers half the width and height */
-
-    /* Combine all gradients into one background */
-    background-repeat: no-repeat; /* Prevent repeating the gradient */
+        top left,
+        top right,
+        bottom right,
+        bottom left;
+    background-size: 100% 100%; /*cover width and height*/
+    background-repeat: no-repeat;
 }
 
 @keyframes gradients {
@@ -186,6 +178,25 @@ audio {
     animation-timing-function: ease;
 }
 
+.hl {
+    font-size: 5vw;
+    color: azure;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: start;
+    margin-top: 7vh;
+}
+.in {
+    animation: hlin 10s infinite ease;
+}
+.hold {
+    animation: hlhold 10s infinite ease;
+}
+.out {
+    animation: hlout 10s infinite ease;
+}
+
 @keyframes circle {
     0% {transform: scale(1);}
     40% {transform: scale(1.4);}
@@ -203,7 +214,29 @@ audio {
     40% {transform: scale(1.4); opacity: 100%;}
     50% {transform: scale(2); opacity: 0%;}
     50.1% {transform: scale(1.4); opacity: 100%;}
-    60% {transform: scale(2); opacity: 0%;}
-    60.1% {transform: scale(1.4);}
+    60.1% {transform: scale(2); opacity: 0%;}
+    60.2% {transform: scale(1.4);}
     100% {transform: scale(1);}
+}
+@keyframes hlin {
+    0% {opacity: 0%;}
+    5% {opacity: 100%;}
+    35% {opacity: 100%;}
+    40% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+@keyframes hlhold {
+    0% {opacity: 0%;}
+    35% {opacity: 0%;}
+    40% {opacity: 100%;}
+    60% {opacity: 100%;}
+    65% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+@keyframes hlout {
+    0% {opacity: 0%;}
+    60% {opacity: 0%;}
+    65% {opacity: 100%;}
+    95% {opacity: 100%;}
+    100% {opacity: 0%;}
 }
