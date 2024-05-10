@@ -15,7 +15,7 @@
 
 body {
     font-family: "Raleway";
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 0;
 }
 
@@ -81,6 +81,7 @@ audio {
     width: 100vw;
     height: 100vh;
     z-index: -2;
+    display: grid;
     grid-row: 1/2;
     grid-column: 1/2;
 }
@@ -92,6 +93,7 @@ audio {
     
     grid-row: 1/2;
     grid-column: 1/2;
+    z-index: -2;
     animation-name: gradients;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -131,4 +133,77 @@ audio {
     80% {--gr1: 0.5; --gr2: 0.65; --gr3: 0.68; --gr4: 0.7}
     90% {--gr1: 0.6; --gr2: 0.55; --gr3: 0.69; --gr4: 0.65}
     100% {--gr1: 0.7; --gr2: 0.45; --gr3: 0.7; --gr4: 0.6}
+}
+
+.circle {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 25vw;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+    background-image: linear-gradient(rgb(73, 173, 255, 0.5), rgb(136, 225, 255, 0.5));
+
+    animation-name: circle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.smolcircle {
+    width: 26vw;
+    height: 26vw;
+    border-radius: 26vw;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+    background-color: #ffffff25;
+
+    animation-name: smolcircle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.jumpcircle {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 25vw;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    z-index: -2;
+    background-color: #ffffff25;
+
+    animation-name: jumpcircle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes circle {
+    0% {transform: scale(1);}
+    40% {transform: scale(1.4);}
+    60% {transform: scale(1.4);}
+    100% {transform: scale(1);}
+}
+@keyframes smolcircle {
+    0% {transform: scale(1);}
+    40% {transform: scale(1.4);}
+    60% {transform: scale(1.4);}
+    100% {transform: scale(1);}
+}
+@keyframes jumpcircle {
+    0% {transform: scale(1);}
+    40% {transform: scale(1.4); opacity: 100%;}
+    50% {transform: scale(2); opacity: 0%;}
+    50.1% {transform: scale(1.4); opacity: 100%;}
+    60% {transform: scale(2); opacity: 0%;}
+    60.1% {transform: scale(1.4);}
+    100% {transform: scale(1);}
 }
