@@ -142,6 +142,7 @@ audio {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
+    animation-play-state: paused;
 }
 
 .smolcircle {
@@ -159,6 +160,7 @@ audio {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
+    animation-play-state: paused;
 }
 
 .jumpcircle {
@@ -176,6 +178,7 @@ audio {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
+    animation-play-state: paused;
 }
 
 .hl {
@@ -186,15 +189,19 @@ audio {
     justify-self: center;
     align-self: start;
     margin-top: 10vh;
+    z-index: 3;
 }
 .in {
     animation: hlin 10s infinite ease;
+    animation-play-state: paused;
 }
 .hold {
     animation: hlhold 10s infinite ease;
+    animation-play-state: paused;
 }
 .out {
     animation: hlout 10s infinite ease;
+    animation-play-state: paused;
 }
 
 @keyframes circle {
