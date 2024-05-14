@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    
+
  /*   const root = document.documentElement;
     const gradient_1 = 0.7; const gradient_2 = 0.7; const gradient_3 = 0.7; const gradient_4 = 0.7; 
 
@@ -21,8 +23,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("button").addEventListener("click", function() {
         const opa = document.getElementById("opa");
         const circle = document.getElementById("circle");
+        circle.style.animationPlayState = "running";
         const smolcircle = document.getElementById("smolcircle");
+        smolcircle.style.animationPlayState = "running";
         const jumpcircle = document.getElementById("jumpcircle");
+        jumpcircle.style.animationPlayState = "running";
+        const hlin = document.getElementById("hlin");
+        hlin.style.animationPlayState = "running";
+        const hlhold = document.getElementById("hlhold");
+        hlhold.style.animationPlayState = "running";
+        const hlout = document.getElementById("hlout");
+        hlout.style.animationPlayState = "running";
         const video = document.getElementById("video");
         const sound = document.getElementById("sound");
         button.style.transition = "2s";
@@ -31,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         opa.style.opacity = "0%";
 
         //video.play();
-        sound.volume = 0.2;
-        //sound.play();
+        sound.volume = 0.1;
+        sound.play();       
     });
 
 });
