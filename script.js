@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
         buttonguided.style.transition = "1s";
         buttonguided.style.opacity = "0%";
         buttonguided.style.transform = "translatex(-50vw)";
+        buttonback.style.opacity = "100%";
         opa.style.transition = "2s";
         opa.style.opacity = "0%";
 
-        //video.play();
         sound.volume = 0.1;
         sound.play();       
     });
@@ -66,12 +66,48 @@ document.addEventListener('DOMContentLoaded', function () {
         buttonguided.style.transition = "1s";
         buttonguided.style.opacity = "0%";
         buttonguided.style.transform = "translatex(-50vw)";
+        buttonback.style.opacity = "100%";
         opa.style.transition = "2s";
         opa.style.opacity = "0%";
 
-        //video.play();
         sound.volume = 0.1;
         sound.play();       
+    });
+
+    document.getElementById("buttonback").addEventListener("click", function() {
+        circle.style.animation = "none";
+        smolcircle.style.animation = "none"; 
+        jumpcircle.style.animation = "none";
+        hlin.style.animation = "none";
+        hlhold.style.animation = "none"; 
+        hlout.style.animation = "none";
+
+        circle.offsetHeight;
+        smolcircle.offsetHeight;
+        jumpcircle.offsetHeight;
+        hlin.offsetHeight;
+        hlhold.offsetHeight;
+        hlout.offsetHeight;
+
+        circle.style.animation = "circle 10s infinite ease paused";
+        smolcircle.style.animation = "smolcircle 10s infinite ease paused"; 
+        jumpcircle.style.animation = "jumpcircle 10s infinite ease paused";
+        hlin.style.animation = "hlin 10s infinite ease paused";
+        hlhold.style.animation = "hlhold 10s infinite ease paused"; 
+        hlout.style.animation = "hlout 10s infinite ease paused";
+
+        buttonfree.style.transition = "1s";
+        buttonfree.style.opacity = "100%";
+        buttonfree.style.transform = "translatex(0vw)";
+        buttonguided.style.transition = "1s";
+        buttonguided.style.opacity = "100%";
+        buttonguided.style.transform = "translatex(0vw)";
+        buttonback.style.transition = "1s";
+        buttonback.style.opacity = "0%";
+        opa.style.transition = "2s";
+        opa.style.opacity = "100%";
+
+        sound.pause();       
     });
 
 });
