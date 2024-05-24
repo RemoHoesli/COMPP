@@ -18,26 +18,54 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 */
     
+    const opa = document.getElementById("opa");
+    const circle = document.getElementById("circle");
+    const smolcircle = document.getElementById("smolcircle");
+    const jumpcircle = document.getElementById("jumpcircle");
+    const hlin = document.getElementById("hlin");
+    const hlhold = document.getElementById("hlhold");
+    const hlout = document.getElementById("hlout");
+    const video = document.getElementById("video");
+    const sound = document.getElementById("sound");
+    const buttonfree = document.getElementById("buttonfree");
+    const buttonguided = document.getElementById("buttonguided");
+    const buttonback = document.getElementById("buttonback");
 
 
-    document.getElementById("button").addEventListener("click", function() {
-        const opa = document.getElementById("opa");
-        const circle = document.getElementById("circle");
+    document.getElementById("buttonguided").addEventListener("click", function() {
         circle.style.animationPlayState = "running";
-        const smolcircle = document.getElementById("smolcircle");
-        smolcircle.style.animationPlayState = "running";
-        const jumpcircle = document.getElementById("jumpcircle");
+        smolcircle.style.animationPlayState = "running"; 
         jumpcircle.style.animationPlayState = "running";
-        const hlin = document.getElementById("hlin");
         hlin.style.animationPlayState = "running";
-        const hlhold = document.getElementById("hlhold");
-        hlhold.style.animationPlayState = "running";
-        const hlout = document.getElementById("hlout");
+        hlhold.style.animationPlayState = "running"; 
         hlout.style.animationPlayState = "running";
-        const video = document.getElementById("video");
-        const sound = document.getElementById("sound");
-        button.style.transition = "2s";
-        button.style.opacity = "0%";
+        buttonfree.style.transition = "1s";
+        buttonfree.style.opacity = "0%";
+        buttonfree.style.transform = "translatex(50vw)";
+        buttonguided.style.transition = "1s";
+        buttonguided.style.opacity = "0%";
+        buttonguided.style.transform = "translatex(-50vw)";
+        opa.style.transition = "2s";
+        opa.style.opacity = "0%";
+
+        //video.play();
+        sound.volume = 0.1;
+        sound.play();       
+    });
+
+    document.getElementById("buttonfree").addEventListener("click", function() {
+        circle.style.animationPlayState = "running";
+        smolcircle.style.animationPlayState = "running"; 
+        jumpcircle.style.animationPlayState = "running";
+        hlin.style.animationPlayState = "running";
+        hlhold.style.animationPlayState = "running"; 
+        hlout.style.animationPlayState = "running";
+        buttonfree.style.transition = "1s";
+        buttonfree.style.opacity = "0%";
+        buttonfree.style.transform = "translatex(50vw)";
+        buttonguided.style.transition = "1s";
+        buttonguided.style.opacity = "0%";
+        buttonguided.style.transform = "translatex(-50vw)";
         opa.style.transition = "2s";
         opa.style.opacity = "0%";
 
