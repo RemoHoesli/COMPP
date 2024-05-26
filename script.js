@@ -49,8 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
         opa.style.transition = "2s";
         opa.style.opacity = "0%";
 
+        songArray = ["audio/audio1.mp3", "audio/audio2.mp3", "audio/audio3.mp3", "audio/audio4.mp3", "audio/audio5.mp3", "audio/audio6.mp3", "audio/audio7.mp3", "audio/audio8.mp3", "audio/audio9.mp3"];
+        var num = Math.floor(Math.random() * songArray.length);
+        var x = document.getElementById("sound");
+        x.src = songArray[num]; 
+        console.log("Song number: "+num);
+     
         sound.volume = 0.1;
-        sound.play();       
+        sound.autoplay = true;
+        sound.load();
+        
+               
     });
 
     document.getElementById("buttonfree").addEventListener("click", function() {
@@ -70,8 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
         opa.style.transition = "2s";
         opa.style.opacity = "0%";
 
+        songArray = ["audio/audio1.mp3", "audio/audio2.mp3", "audio/audio3.mp3", "audio/audio4.mp3", "audio/audio5.mp3", "audio/audio6.mp3", "audio/audio7.mp3", "audio/audio8.mp3", "audio/audio9.mp3"];
+        var num = Math.floor(Math.random() * songArray.length);
+        var x = document.getElementById("sound");
+        x.src = songArray[num]; 
+        console.log("Song number: "+num);
+     
         sound.volume = 0.1;
-        sound.play();       
+        sound.autoplay = true;
+        sound.load();       
     });
 
     document.getElementById("buttonback").addEventListener("click", function() {
@@ -107,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         opa.style.transition = "2s";
         opa.style.opacity = "100%";
 
-        sound.pause();       
+        sound.pause();
     });
 
 });
