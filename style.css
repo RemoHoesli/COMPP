@@ -31,10 +31,22 @@ body {
 .opacity {
     width: 100vw;
     height: 100vh;
-    background-color: #3f074ebe;
+    background-color: #3f074ee0;
     grid-row: 1/2;
     grid-column: 1/5;
     z-index: -1;
+}
+
+.headline {
+    font-size: 4vh;
+    color: azure;
+    grid-row: 1/2;
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: start;
+    margin-top: 7vh;
+    z-index: 3;
+    opacity: 100%;
 }
 
 .buttonfree {
@@ -101,14 +113,14 @@ body {
 .buttonfree:hover {
     background-color: #2fe3e99a;
     color: #ffffff;
-    transition: 0.2s;
+    transition: 0.1s;
     transform: scale(1.02);
 }
 
 .buttonguided:hover {
     background-color: #9ba5ffc0;
     color: #ffffff;
-    transition: 0.2s;
+    transition: 0.1s;
     transform: scale(1.02);
 }
 
@@ -118,13 +130,43 @@ body {
     transition: 0.2s;
 }
 
-video {
-    width: 100vw;
-    height:100vh;
-    z-index: -2;
+.footerguided {
+    font-size: 3vh;
+    color: azure;
     grid-row: 1/2;
-    grid-column: 1/5;
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10vh;
+    z-index: 3;
+    opacity: 0;
 }
+.footerfree {
+    font-size: 3vh;
+    color: azure;
+    grid-row: 1/2;
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10vh;
+    z-index: 3;
+    opacity: 0;
+}
+
+.guidetext {
+    font-size: 2vh;
+    font-weight: 100;
+    color: azure;
+    grid-row: 1/2;
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10vh;
+    z-index: 3;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
 
 audio {
     width: 500px;
