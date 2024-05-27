@@ -31,10 +31,22 @@ body {
 .opacity {
     width: 100vw;
     height: 100vh;
-    background-color: #3f074ee0;
     grid-row: 1/2;
     grid-column: 1/5;
     z-index: -1;
+
+    background-image: 
+        linear-gradient(to top left, rgba(0,0,0,0), rgb(50, 0, 92)),
+        linear-gradient(to top right, rgba(0, 0, 0, 0), rgb(85, 0, 50)),
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgb(23, 0, 77)),
+        linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgb(114, 0, 95));
+    background-position:
+        top left,
+        top right,
+        bottom right,
+        bottom left;
+    background-size: 100% 100%; /*cover width and height*/
+    background-repeat: no-repeat;
 }
 
 .headline {

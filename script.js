@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         smolcircle.style.animationPlayState = "running"; 
         jumpcircle.style.animationPlayState = "running";
         
+        
         headline.style.transition = "0.5s";
         headline.style.opacity = "0%";
         buttonfree.style.transition = "1s";
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (timerun >= 32.5) { guidetext.innerHTML = 'Let your hands rest naturally on your lap'; }
                 if (timerun >= 36) { guidetext.innerHTML = ''; }
                 if (timerun >= 38.5) { guidetext.innerHTML = 'Begin to notice your breath'; }
-                if (timerun >= 39.5) { 
+                if (timerun == 39.5) { 
                     hlin.style.animationPlayState = "running";
                     hlhold.style.animationPlayState = "running"; 
                     hlout.style.animationPlayState = "running";
